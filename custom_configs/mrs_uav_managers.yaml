@@ -71,7 +71,7 @@ mrs_uav_managers:
           noise_unhealthy_coeff: 100.0 # covariance gets multiplied by this coefficient when correction is unhealthy (R)
           message:
             type: "nav_msgs/Odometry"
-            topic: "slam/odom" # without uav namespace
+            topic: "point_lio/odom" # without uav namespace
             limit: 
               delay: 2.0 # [s] messages with higher delay will flag correction as unhealthy
               time_since_last: 1.0 # [s] larger time step between messages will flag correction as unhealthy
@@ -120,7 +120,7 @@ mrs_uav_managers:
           noise_unhealthy_coeff: 100.0 # covariance gets multiplied by this coefficient when correction is unhealthy (R)
           message:
             type: "nav_msgs/Odometry"
-            topic: "slam/odom" # without uav namespace
+            topic: "point_lio/odom" # without uav namespace
             limit: 
               delay: 2.0 # [s] messages with higher delay will flag correction as unhealthy
               time_since_last: 1.0 # [s] larger time step between messages will flag correction as unhealthy
@@ -157,7 +157,7 @@ mrs_uav_managers:
           noise_unhealthy_coeff: 100.0 # covariance gets multiplied by this coefficient when correction is unhealthy (R)
           message:
             type: "nav_msgs/Odometry"
-            topic: "slam/odom" # without uav namespace
+            topic: "point_lio/odom" # without uav namespace
             limit: 
               delay: 2.0 # [s] messages with higher delay will flag correction as unhealthy
               time_since_last: 1.0 # [s] larger time step between messages will flag correction as unhealthy
@@ -219,8 +219,8 @@ mrs_uav_managers:
     mapping_origin_tf:
       enabled: true
       debug_prints: false
-      lateral_topic: "slam/odom" # name of the topic used for x, y components of the tf (expects nav_msgs/Odometry topic type)
-      altitude_topic: "slam/odom" # name of the topic  used for z components of the tf (expects nav_msgs/Odometry topic type)
+      lateral_topic: "point_lio/odom" # name of the topic used for x, y components of the tf (expects nav_msgs/Odometry topic type)
+      altitude_topic: "point_lio/odom" # name of the topic  used for z components of the tf (expects nav_msgs/Odometry topic type)
       orientation_topic: "hw_api/orientation" # name of the topic  used for orientation components of the tf (expects geometry_msgs/Quaternion topic type)
       inverted: true # publish as inverted tf (the default for inverted mrs tf tree convention)
       custom_frame_id:
