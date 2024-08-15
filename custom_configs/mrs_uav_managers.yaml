@@ -75,6 +75,10 @@ mrs_uav_managers:
             limit: 
               delay: 2.0 # [s] messages with higher delay will flag correction as unhealthy
               time_since_last: 1.0 # [s] larger time step between messages will flag correction as unhealthy
+          transform: 
+            enabled: true
+            from_frame: "livox"
+            to_frame: "fcu"
   
           processors: [] # types of processors attached to this measurement
 
