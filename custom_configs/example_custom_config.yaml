@@ -199,7 +199,6 @@ mrs_uav_managers:
   constraint_manager:
 
     estimator_types: [
-      "gps_garmin",
       "point_lio"
     ]
 
@@ -212,19 +211,16 @@ mrs_uav_managers:
     # list of allowed gains per odometry mode
     allowed_constraints:
       point_lio: ["slow", "medium", "fast"]
-      gps_garmin: ["slow", "medium", "fast"]
 
     # those gains will be used automatically when a localization mode switches
     # and the current gains are not in the allowed list (next paragraphs)
     default_constraints:
       point_lio: "slow"
-      gps_garmin: "slow"
 
   gain_manager:
 
     estimator_types: [
       "point_lio",
-      "gps_garmin"
     ]
 
     gains: [
@@ -234,13 +230,11 @@ mrs_uav_managers:
     # list of allowed gains per odometry mode
     allowed_gains:
       point_lio: ["supersoft"]
-      gps_garmin: ["supersoft"]
 
     # those gains will be used automatically when a localization mode switches
     # and the current gains are not in the allowed list (next paragraphs)
     default_gains:
       point_lio: "supersoft"
-      gps_garmin: "supersoft"
 
   transform_manager:
 
